@@ -57,4 +57,5 @@ Lag én side «Eksamen UQ4Marine» med:
 ## Sikkerhet og regler
 - Ikke last opp studentnummer, personnummer eller private dokumenter til KI-verktøy.
 - Kursmateriale skal bare ligge i private notatbøker og repoer.
-- Sjekk emnebeskrivelsen og HVL sine regler for KI-bruk før innleveringer og eksamen. Oppsettet er for **læring**, ikke for å levere KI-tekst.
+- Sjekk emnebeskrivelsen og studiestedets regler for KI-bruk før innleveringer, og oppgi KI-bruk når det kreves. Eksamen er ofte uten KI, så bruk oppsettet til å **lære**.
+- Dobbel- og trippelsjekk med flere KI-er: [4-kryssjekk-flere-llm.md](4-kryssjekk-flere-llm.md)

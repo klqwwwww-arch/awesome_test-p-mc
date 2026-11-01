@@ -23,6 +23,7 @@ Kursfiler: https://github.com/Hugo-build/numerical_uq4marine_course
 
 Etterpå: legg PDF-er i `materiale/`, kjør `uv run lag_kilder.py` og last opp `kilder/` til NotebookLM og Gemini.
 Se [guider/3-ai-verktoy.md](guider/3-ai-verktoy.md).
+Vil du dobbel- eller trippelsjekke svar med Copilot, Claude, Codex, Perplexity og Grok? Se [guider/4-kryssjekk-flere-llm.md](guider/4-kryssjekk-flere-llm.md).
 
 ## Mappene
 
@@ -31,7 +32,7 @@ eksamen-uq4marine/
 ├── oppsett.sh               ← kjør først (og når kurset er oppdatert)
 ├── lag_kilder.py            ← PDF + kursskript → .md for KI-verktøy
 ├── pensum.md                ← temaer, fremdrift, eksamensspørsmål
-├── guider/                  ← 1 GitHub · 2 VS Code/Copilot · 3 KI-verktøy
+├── guider/                  ← 1 GitHub · 2 VS Code/Copilot · 3 KI-verktøy · 4 Kryssjekk
 ├── notater/                 ← dine oppsummeringsark (_mal.md)
 ├── ovinger/                 ← dine kopier av skript og løsninger
 ├── materiale/               ← dine PDF-er (lastes ikke opp til GitHub)

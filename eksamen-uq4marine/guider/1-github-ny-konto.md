@@ -5,7 +5,7 @@ Tid: ca. 20 min. Hvorfor: repoet `awesome_test-p-mc` er **offentlig**. Kursmater
 ## A. Lag kontoen
 
 1. Gå til https://github.com/signup
-   - Bruk HVL-e-posten din, så går studentverifiseringen raskere.
+   - Bruk skole-e-posten din, så går studentverifiseringen raskere.
    - Brukernavn uten fullt navn eller fødselsår.
 2. Slå på totrinnsinnlogging: https://github.com/settings/security
    - Velg passkey eller autentiseringsapp. Lagre gjenopprettingskodene i passordbehandleren.
@@ -13,7 +13,7 @@ Tid: ca. 20 min. Hvorfor: repoet `awesome_test-p-mc` er **offentlig**. Kursmater
    - Huk av «Keep my email addresses private».
    - Kopier `…@users.noreply.github.com`-adressen. Den trenger du i steg C.
 4. Søk om studentfordeler (gratis Copilot for studenter): https://education.github.com/pack
-   - Last opp studentbevis eller bruk HVL-e-post. Godkjenning kan ta noen dager.
+   - Last opp studentbevis eller bruk skole-e-post. Godkjenning kan ta noen dager.
 
 ## B. Logg inn fra Mac-en (velg ett alternativ)
 
