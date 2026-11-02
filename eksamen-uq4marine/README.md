@@ -38,6 +38,8 @@ eksamen-uq4marine/
 ├── lag_notebooklm.py        ← kjører kursskriptene → PDF per tema + .ipynb (NotebookLM, repetisjon)
 ├── lag_kilder.py            ← PDF + kursskript → .md for KI-verktøy (reserve)
 ├── pensum.md                ← temaer, fremdrift, eksamensspørsmål
+├── eksamensplan.md          ← plan for alle eksamener H2026, med lagringspunkt
+├── AGENTS.md                ← instruks og oppgaveliste for Codex
 ├── guider/                  ← 1 GitHub · 2 VS Code/Copilot · 3 KI-verktøy · 4 Kryssjekk · 5 Canvas → NotebookLM
 ├── notater/                 ← dine oppsummeringsark (_mal.md)
 ├── ovinger/                 ← dine kopier av skript og løsninger
@@ -56,6 +58,20 @@ eksamen-uq4marine/
 | **Vanlig (45 min)** | Velg tema i `pensum.md`/Notion → kjør skriptet → `/forklar` → endre én parameter → quiz i NotebookLM → oppdater status |
 | **Lett dag (15 min)** | `/lett-dag` i Copilot *eller* en lydoversikt i NotebookLM |
 | **Lagre** | `git add . && git commit -m "notater" && git push` |
+
+## Lett på disk (velg én)
+
+| Valg | Plass | Hva |
+|---|---|---|
+| **1 · Ingenting lokalt** | ~0 | Last opp ferdige PDF-er til NotebookLM. Åpne `.ipynb` i Google Colab via Google Drive. Slett zip-filene etterpå. |
+| **2 · Bare kurset** | lite | `bash oppsett.sh` uten pandoc/xelatex. Bruk ferdige PDF-er, kjør skriptene i VS Code. |
+| **3 · Alt** | mest | Som 2 + `brew install pandoc` og LaTeX for å lage PDF-ene selv. Trengs bare hvis foreleser endrer kurset. |
+
+Rydd: `rm -rf kilder/ && uv cache prune` (kurs/ og notatene dine blir liggende).
+
+## Codex og andre kodeagenter
+Les [AGENTS.md](AGENTS.md). Gi én oppgave om gangen, for eksempel:
+`Les AGENTS.md. Gjør bare oppgave 1 (Sikkerhet) på en ny branch. Vis diff og resultatet av sjekkene. Ikke merge.`
 
 ## Hva er forbedret fra datalab-e-posten
 - **Ett skript** i stedet for 7 manuelle steg. Det stopper med en tydelig melding hvis noe mangler.
