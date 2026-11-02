@@ -13,7 +13,7 @@ Prinsipp: **lag kildene én gang** (`uv run lag_kilder.py`), og bruk dem i alle 
 
 ## NotebookLM (start her, gir mest læring per minutt)
 1. https://notebooklm.google.com → **Ny notatbok** «UQ4Marine»
-2. Legg til kilder: filene i `kilder/skript/`, `kilder/pdf/`, `kilder/dokumenter/` og `kilder/kurs_README.md`. Forelesnings-PDF-ene kan også lastes opp direkte.
+2. Legg til kilder: **alt i `kilder/notebooklm/`** (én PDF per tema med formler og figurer, lages av `kurs/.venv/bin/python lag_notebooklm.py`) + slides fra Canvas. Se [5-canvas-og-notebooklm.md](5-canvas-og-notebooklm.md). `.md`-filene fra `lag_kilder.py` er reserven hvis PDF-ene ikke kan lages.
 3. Studio-panelet: **Studieguide**, **Quiz**, **Flashcards** og **Lydoversikt** (fin på dårlige dager: lytt på tur).
 4. Prompt å kopiere:
 

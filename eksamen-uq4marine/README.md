@@ -7,7 +7,7 @@ Kursfiler: https://github.com/Hugo-build/numerical_uq4marine_course
 > ⚠️ **Først:** repoet denne mappen ligger i nå (`awesome_test-p-mc`) er **offentlig**.
 > Ikke last opp kursmateriale hit. Flytt oppsettet til et **privat** repo på den nye kontoen (steg 1).
 
-## Start (3 steg)
+## Start (4 steg)
 
 1. **Ny GitHub-konto + privat repo:** [guider/1-github-ny-konto.md](guider/1-github-ny-konto.md)
 2. **Installer og sjekk alt med én kommando:**
@@ -21,8 +21,13 @@ Kursfiler: https://github.com/Hugo-build/numerical_uq4marine_course
    ```
    Åpne `kurs/pyscripts/01_vectors_matrices.py` → **Run Cell**. Copilot-oppsett: [guider/2-vscode-copilot.md](guider/2-vscode-copilot.md)
 
-Etterpå: legg PDF-er i `materiale/`, kjør `uv run lag_kilder.py` og last opp `kilder/` til NotebookLM og Gemini.
-Se [guider/3-ai-verktoy.md](guider/3-ai-verktoy.md).
+4. **Eksamenspakke til NotebookLM:** kjører alle kursskriptene og lager én PDF per tema (tekst, formler, kode, figurer) + kjørte notebooks:
+   ```sh
+   kurs/.venv/bin/python lag_notebooklm.py
+   ```
+   Last opp `kilder/notebooklm/` + slides fra Canvas. Se [guider/5-canvas-og-notebooklm.md](guider/5-canvas-og-notebooklm.md).
+
+Reserve uten PDF-verktøy: `uv run lag_kilder.py` lager rene .md-filer. Se [guider/3-ai-verktoy.md](guider/3-ai-verktoy.md).
 Vil du dobbel- eller trippelsjekke svar med Copilot, Claude, Codex, Perplexity og Grok? Se [guider/4-kryssjekk-flere-llm.md](guider/4-kryssjekk-flere-llm.md).
 
 ## Mappene
@@ -30,14 +35,15 @@ Vil du dobbel- eller trippelsjekke svar med Copilot, Claude, Codex, Perplexity o
 ```text
 eksamen-uq4marine/
 ├── oppsett.sh               ← kjør først (og når kurset er oppdatert)
-├── lag_kilder.py            ← PDF + kursskript → .md for KI-verktøy
+├── lag_notebooklm.py        ← kjører kursskriptene → PDF per tema + .ipynb (NotebookLM, repetisjon)
+├── lag_kilder.py            ← PDF + kursskript → .md for KI-verktøy (reserve)
 ├── pensum.md                ← temaer, fremdrift, eksamensspørsmål
-├── guider/                  ← 1 GitHub · 2 VS Code/Copilot · 3 KI-verktøy · 4 Kryssjekk
+├── guider/                  ← 1 GitHub · 2 VS Code/Copilot · 3 KI-verktøy · 4 Kryssjekk · 5 Canvas → NotebookLM
 ├── notater/                 ← dine oppsummeringsark (_mal.md)
 ├── ovinger/                 ← dine kopier av skript og løsninger
 ├── materiale/               ← dine PDF-er (lastes ikke opp til GitHub)
 ├── kurs/                    ← forelesers repo, ikke endre (lages av oppsett.sh)
-├── kilder/                  ← genererte tekstfiler (lages av lag_kilder.py)
+├── kilder/                  ← genererte filer: notebooklm/, notebooks/, animasjoner/ + .md-reserve
 ├── .github/copilot-instructions.md + prompts/   ← Copilot: norsk, hint før fasit, /forklar /oving …
 ├── .vscode/                 ← Python-tolk = kurs/.venv, anbefalte utvidelser
 └── .vscode/settings.json    ← valgte innstillinger for Python og Copilot

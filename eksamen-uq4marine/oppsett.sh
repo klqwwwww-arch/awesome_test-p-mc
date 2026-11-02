@@ -87,4 +87,5 @@ fi
 printf '\n🎉 Ferdig. Neste steg:\n'
 printf '   1) code "%s"\n' "$ROT"
 printf '   2) Åpne kurs/pyscripts/01_vectors_matrices.py → klikk «Run Cell» over første # %%%%\n'
-printf '   3) Valgfritt: uv run lag_kilder.py   (lager filer til NotebookLM/Gemini/Perplexity)\n'
+printf '   3) Eksamenspakke: kurs/.venv/bin/python lag_notebooklm.py   (PDF per tema → NotebookLM, se guider/5)\n'
+printf '      Uten pandoc/xelatex: uv run lag_kilder.py   (rene .md-filer)\n'

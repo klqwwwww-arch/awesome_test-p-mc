@@ -81,10 +81,12 @@ def ord_i(tekst: str) -> int:
 
 
 def main() -> None:
-    if UT.exists():
-        shutil.rmtree(UT)
+    # Slett bare det dette skriptet lager selv – ikke notebooklm/ og notebooks/ fra lag_notebooklm.py.
     for mappe in ("skript", "pdf", "dokumenter"):
+        shutil.rmtree(UT / mappe, ignore_errors=True)
         (UT / mappe).mkdir(parents=True)
+    for fil in ("kurs_README.md", "_samlet_kurs.md"):
+        (UT / fil).unlink(missing_ok=True)
 
     laget: list[tuple[Path, str]] = []
 

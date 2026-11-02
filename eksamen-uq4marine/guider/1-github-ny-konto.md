@@ -59,7 +59,7 @@ Bytt ut `DITT NAVN` og `NOREPLY-ADRESSE`. Resten kan kopieres som det står.
 
 ```sh
 mkdir -p ~/Studie && cd ~/Studie
-git clone --depth 1 --branch claude/datalab-lecture-setup-m2ptxk https://github.com/klqwwwww-arch/awesome_test-p-mc.git _midlertidig
+git clone --depth 1 --branch main https://github.com/klqwwwww-arch/awesome_test-p-mc.git _midlertidig
 cp -R _midlertidig/eksamen-uq4marine ./eksamen-uq4marine
 rm -rf _midlertidig
 cd eksamen-uq4marine
