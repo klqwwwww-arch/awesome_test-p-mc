@@ -5,10 +5,12 @@
 | Eksamen | Fag | Form | Beslutning før |
 |---|---|---|---|
 | **Ma 16.11** 09–12 | OFF505 (bølger: shoaling, refraksjon) | papir | – |
-| **Fr 27.11** | OFF585 | papir | **13.11: ta eller trekk OFF585** |
-| **Fr 11.12** (ubekreftet) | OFF516 | WISEflow (laptop) | **27.11: ta eller trekk OFF516** |
+| **Fr 27.11** | OFF585 Math & Dynamics | papir | **13.11: ta eller trekk OFF585** |
+| **Fr 11.12** (ubekreftet) | OFF516 Field Development | WISEflow (laptop) | **27.11: ta eller trekk OFF516** |
 
-**UQ4Marine-materialet hører til:** ☐ OFF585 ☐ OFF516 ☐ annet: ______ → velg kolonne i fase 2 eller 3 nedenfor.
+**Porter (stenger eksamen hvis de mangler):** OFF585: 4 av 5 øvinger godkjent · OFF516: alle 8 øvinger · OFF505: 80 % av oppgavene.
+
+**UQ4Marine-materialet** (matriser, sannsynlighet, dynamikk, ekstremverdier) passer trolig til **OFF585 Math & Dynamics**. ☐ Bekreftet ☐ Annet fag: ______ → velg kolonne i fase 2 eller 3.
 
 ## 💾 Lagringspunkt (oppdater når du stopper)
 
@@ -47,7 +49,7 @@ Følg OFF505-planen fra 31.10 (temaer → gamle eksamener → prøveeksamen 13.1
 | Fr 20.11 | Tema 3 | B3 (skum) + B4 |
 | Lø 21.11 | Tema 4 | B5 |
 | Sø 22.11 | Lett: flashcards | samme |
-| Ma 23.11 | Gammel eksamen, diagnose | B6 |
+| Ma 23.11 | Gammel eksamen (2021–2025 finnes med løsning), diagnose | B6 |
 | Ti 24.11 | Svake temaer | B7 + R1 |
 | On 25.11 | Prøveeksamen på tid | R2 |
 | To 26.11 | Svake punkter, legg deg tidlig | R3 |
