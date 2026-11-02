@@ -1,0 +1,26 @@
+# Lærerens kursrepo – hentes og oppdateres av oppsett.sh
+kurs/
+
+# Genererte tekstkilder – lages av lag_kilder.py
+kilder/
+
+# Kursmateriale (PDF-er, slides) holdes LOKALT som standard (opphavsrett + filstørrelse).
+# Bare i et PRIVAT repo: slett de to linjene under hvis du vil ha materialet i skyen.
+materiale/*
+!materiale/README.md
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# Hemmeligheter – skal aldri i git
+.env
+*.pem
+*.key
+id_rsa*
+id_ed25519*

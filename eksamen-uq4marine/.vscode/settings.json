@@ -1,0 +1,20 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/kurs/.venv/bin/python",
+  "python.terminal.activateEnvironment": true,
+  "jupyter.interactiveWindow.textEditor.executeSelection": true,
+  "search.useIgnoreFiles": false,
+  "search.exclude": {
+    "**/.venv": true,
+    "**/__pycache__": true,
+    "**/.ipynb_checkpoints": true
+  },
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/.ipynb_checkpoints": true
+  },
+  "files.watcherExclude": {
+    "**/.venv/**": true
+  },
+  "chat.promptFiles": true,
+  "github.copilot.chat.codeGeneration.useInstructionFiles": true
+}
