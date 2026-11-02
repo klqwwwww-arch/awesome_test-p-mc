@@ -14,7 +14,7 @@ Kursfiler: https://github.com/Hugo-build/numerical_uq4marine_course
    ```sh
    bash oppsett.sh
    ```
-   Skriptet sjekker Git, installerer uv, henter kurset til `kurs/`, lager Python-miljøet, kjører leksjon 01 som test og installerer VS Code-utvidelsene. Det er trygt å kjøre på nytt, og en ny kjøring oppdaterer kurset.
+   Skriptet sjekker Git, installerer uv, henter kurset til `kurs/`, lager Python-miljøet, kjører leksjon 01 som test og installerer VS Code-utvidelsene. Det er trygt å kjøre på nytt, og en ny oppdatering vil bare oppdatere ting som er nødvendige.
 3. **Åpne og kjør:**
    ```sh
    code .
@@ -39,7 +39,8 @@ eksamen-uq4marine/
 ├── kurs/                    ← forelesers repo, ikke endre (lages av oppsett.sh)
 ├── kilder/                  ← genererte tekstfiler (lages av lag_kilder.py)
 ├── .github/copilot-instructions.md + prompts/   ← Copilot: norsk, hint før fasit, /forklar /oving …
-└── .vscode/                 ← Python-tolk = kurs/.venv, anbefalte utvidelser
+├── .vscode/                 ← Python-tolk = kurs/.venv, anbefalte utvidelser
+└── .vscode/settings.json    ← valgte innstillinger for Python og Copilot
 ```
 
 ## Hverdagen
@@ -57,3 +58,167 @@ eksamen-uq4marine/
 - **Sikkerhet:** `curl … | sh` kjøres bare etter at du har sagt ja. Homebrew brukes hvis du har det.
 - **Kurset ligger i `kurs/`, dine filer ved siden av.** Kursoppdateringer krasjer ikke med notatene dine.
 - **Røyktest:** leksjon 01 kjøres automatisk, så du vet at alt virker før timen.
+
+## AI, forståelse og håndkalkulasjon
+
+### Hovedprinsipp
+AI-verktøy som Claude, Codex, Copilot og lignende er nyttige til å:
+- forklare konsepter
+- generere kode
+- lage struktur og plan
+- sjekke beregninger og oppsummeringer
+
+Men de kan også:
+- gi feilaktige svar som ser overbevisende ut
+- gjøre feil i antakelser om enheter, dimensjoner eller modellvalg
+- feile i numerisk analyse uten at feilen alltid er tydelig
+- produsere løsninger som ser riktige ut, men som ikke passer til problemet
+
+Derfor er det viktig å kombinere AI med:
+- matematisk forståelse
+- håndkalkulasjon
+- kritisk vurdering
+- uavhengig verifisering av resultater
+
+### Hvorfor håndkalkulasjon fortsatt er viktig
+Håndkalkulasjon hjelper deg med å:
+- bygge intuitiv forståelse for konseptet
+- finne regnefeil tidlig
+- vurdere om et tall er realistisk
+- forstå antakelsene i modellen
+- utvikle bedre prompts og bedre spørsmål til AI
+- sette AI-output i riktig kontekst
+
+Et godt arbeid flyter slik:
+1. Forstå problemet matematisk
+2. Gjør en enkel håndberegning eller skisse
+3. Formuler modellen eller løsningsmetoden
+4. Kjør beregningen i Python
+5. Sjekk resultatet mot håndberegningen
+6. Bruk AI til å forklare, forbedre og validere, ikke til å erstatte forståelsen
+
+### Praktisk arbeidsflyt
+#### 1. Før du skriver kode
+- Les oppgaven nøye
+- Identifiser hvilke størrelser som finnes
+- Notér enheter og antakelser
+- Skriv opp den enkleste varianten av problemet
+- Finn forventet størrelsesorden på svaret
+
+#### 2. Håndkalkulasjon
+Gjennomfør minst ett av disse:
+- enkel regning på papir
+- beregning med håndholdte formler
+- liten testcase hvor svaret er kjent
+- kontroll av dimensjoner og enheter
+- én kontrollregel som viser om resultatet er plausibelt
+
+#### 3. Python-verifisering
+- implementer modellen i Python
+- bruk en liten, tydelig test
+- sammenlign med håndkalkulasjonen
+- sjekk om feilen er liten og forståelig
+
+#### 4. AI-sjekk
+Bruk Claude, Copilot, Codex eller andre verktøy for å:
+- forklare hvordan løsningen virker
+- foreslå forbedringer
+- kontrollere logikken
+- finne alternative formuleringer
+- sammenligne ulike tilnærminger
+
+Men du må fortsatt:
+- lese svaret kritisk
+- sjekke antakelser
+- validere numerisk resultat
+
+### Viktige temaer i dette emnet
+Avhengig av kurset vil disse konseptene ofte være sentrale:
+- vektorer og matriser
+- lineære systemer
+- numerisk stabilitet
+- feilkilder og usikkerhet
+- forventningsverdi og varians
+- Monte Carlo-metoder
+- sensitivitet og påvirkning av parametre
+- diskretisering / finite-difference
+- modellens antakelser og feilkilder
+
+### God praksis for AI-bruk i numerisk arbeid
+- Start med et tydelig, konkret spørsmål
+- Bruk små, fokuserte prompts
+- Be om forklaring før fasit
+- Be om verifisering av antakelser
+- Be om edge cases og feilsituasjoner
+- Be om kontroll av enheter og dimensjoner
+- Be om sammenligning av flere metoder
+- Kjør alltid en enkel sanity check selv om AI har generert kode
+
+### Kort plan for deg
+#### Uke 1: Forståelse
+- velg ett tema fra pensum
+- les det grundig
+- skriv ned 3–5 viktige definisjoner
+- gjør én enkel håndberegning
+
+#### Uke 2: Modell og kode
+- skriv en liten Python-implementasjon
+- test på kjent eksempel
+- sammenlign med håndberegningen
+
+#### Uke 3: Verifisering og kritisk vurdering
+- bruk AI til å forklare og forbedre
+- sammenlign flere svar
+- dokumentér feil, antakelser og begrensninger
+
+#### Uke 4: Finalisering
+- skriv oppsummering
+- legg ved håndregninger og kontrollpunkter
+- forklar hvorfor resultatet er plausibelt
+- reflekter over hvor AI hjalp, og hvor menneskelig skjønn var nødvendig
+
+### Enkel sjekkliste før innlevering
+- [ ] Jeg forstår konseptet uten å bare stole på AI
+- [ ] Jeg har gjort minst én håndberegning
+- [ ] Jeg har verifisert resultatet med Python
+- [ ] Jeg har sjekket enheter, dimensjoner og størrelsesorden
+- [ ] Jeg har vurdert om resultatet er plausibelt
+- [ ] Jeg har brukt AI som verktøy, ikke som eneste kilde til sannhet
+- [ ] Jeg kan forklare hvorfor løsningen er riktig
+
+### Oppsummering
+Det viktigste læringsmålet er ikke bare å få et numerisk svar. Det er å kunne:
+- gjøre en liten, forståelig beregning selv
+- bruke AI som støtte
+- kontrollere output kritisk
+- forstå hvorfor resultatet er riktig eller feil
+
+Dette er også den viktigste sikkerheten mot AI-feil, dårlig prompting og numeriske misforståelser.
+
+---
+
+## GitHub + Claude + Codex workflow
+
+For en effektiv og trygg arbeidsflyt på GitHub er det best å dele arbeidet slik:
+
+- **Claude**: planlegging, arkitektur, UX, kritisk vurdering, review
+- **Codex**: implementasjon, små patcher, API-ruter, kodegenerering
+- **GitHub**: oppgaver, branches, PR-er og dokumentasjon
+
+### Praktisk prosess
+1. Opprett en issue for én liten oppgave
+2. Lag en branch for oppgaven
+3. Be Claude om en kort teknisk plan
+4. La Codex implementere kun det som trengs
+5. Review PR-en og sjekk om resultater er plausible
+6. Merge først når koden er validert og forstått
+
+### God praksis
+- Hold prompts små og fokuserte
+- Endre kun ett felt/fil om gangen
+- Be om liten, presis kode, ikke full rewrite
+- Be om verifisering av edge cases
+- Ikke bruk AI som eneste kontrollmekanisme
+- Sjekk alltid numerisk plausibilitet selv om AI sier at det er riktig
+
+I praksis er dette den tryggeste måten å bruke AI uten å brenne tokens eller gi opp forståelsen.
